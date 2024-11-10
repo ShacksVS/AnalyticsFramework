@@ -10,6 +10,20 @@
 - **Log Management**: Easily display all logs in the console or clear them as needed.
 
 ## Installation
+
+### Swift Package Manager (SPM)
+1. In Xcode, go to **File > Add Packages**.
+2. Enter the following URL: https://github.com/ShacksVS/AnalyticsFramework
+3. Select the desired version and add it to your project.
+
+### CocoaPods
+1. Add `AnalyticsFramework` to your `Podfile`:
+```ruby
+pod 'AnalyticsFrameworkUnderhood', '~> 0.0.1'
+```
+2. For more information visit: https://cocoapods.org/pods/AnalyticsFrameworkUnderhood
+   
+### Manual Installation
 1. **Download** or **clone** the repository.
 2. **Add** the `AnalyticsFramework` folder to your Xcode project.
 
