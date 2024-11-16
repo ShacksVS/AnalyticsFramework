@@ -14,14 +14,21 @@ let package = Package(
             targets: ["AnalyticsFramework"]
         ),
     ],
+    
+    dependencies: [
+        .package(url: "https://github.com/SimplyDanny/SwiftLintPlugins", from: "0.57.0")
+    ],
+    
     targets: [
         .target(
             name: "AnalyticsFramework",
-            dependencies: []
+            dependencies: [],
+            plugins: [.plugin(name: "SwiftLintBuildToolPlugin", package: "SwiftLintPlugins")]
         ),
         .testTarget(
             name: "AnalyticsFrameworkTests",
-            dependencies: ["AnalyticsFramework"]
+            dependencies: ["AnalyticsFramework"],
+            plugins: [.plugin(name: "SwiftLintBuildToolPlugin", package: "SwiftLintPlugins")]
         )
     ]
 )
